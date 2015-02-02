@@ -135,12 +135,7 @@
 		8E408FA81A7F950B00E7842F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8E408FB51A7FAB3400E7842F /* _ACCNote.h */,
-				8E408FB61A7FAB3400E7842F /* _ACCNote.m */,
-				8E408FB71A7FAB3400E7842F /* _ACCNotebook.h */,
-				8E408FB81A7FAB3400E7842F /* _ACCNotebook.m */,
-				8E408FB91A7FAB3400E7842F /* _ACCPhotoContainer.h */,
-				8E408FBA1A7FAB3400E7842F /* _ACCPhotoContainer.m */,
+				8E408FC71A7FABEF00E7842F /* Machine */,
 				8E408FBB1A7FAB3400E7842F /* ACCNote.h */,
 				8E408FBC1A7FAB3400E7842F /* ACCNote.m */,
 				8E408FBD1A7FAB3400E7842F /* ACCNotebook.h */,
@@ -150,6 +145,19 @@
 				8E408FA91A7F957C00E7842F /* Model.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		8E408FC71A7FABEF00E7842F /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				8E408FB51A7FAB3400E7842F /* _ACCNote.h */,
+				8E408FB61A7FAB3400E7842F /* _ACCNote.m */,
+				8E408FB71A7FAB3400E7842F /* _ACCNotebook.h */,
+				8E408FB81A7FAB3400E7842F /* _ACCNotebook.m */,
+				8E408FB91A7FAB3400E7842F /* _ACCPhotoContainer.h */,
+				8E408FBA1A7FAB3400E7842F /* _ACCPhotoContainer.m */,
+			);
+			name = Machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

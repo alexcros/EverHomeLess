@@ -22,9 +22,10 @@ extern const struct ACCNoteRelationships {
 @end
 
 @interface _ACCNote : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
-+ (NSString*)entityName;
++ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_; //manda entity description etc
++ (NSString*)entityName; // nombre de la entidad
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
+
 @property (nonatomic, readonly, strong) ACCNoteID* objectID;
 
 @property (nonatomic, strong) NSDate* creationDate;
