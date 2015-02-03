@@ -20,7 +20,7 @@
     return notebook;
     
 }
-
+/*
 #pragma mark - Lifecycle
 
 -(void) awakeFromInsert{
@@ -43,13 +43,14 @@
     [self tearDownKVO];
     
 }
+*/
 #pragma mark - Utils
 // implementacion del for
 -(NSArray*)observableKeys{
     return @[ACCNotebookAttributes.name,// created with mogenerator :)
              ACCNotebookRelationships.notes];//created with mogenerator :)
 }
-
+/* obsolete by new super class
 #pragma mark - KVO
 
 -(void)setupKVO{
@@ -70,13 +71,13 @@
 }
 -(void) tearDownKVO{
     // Baja en todas las listas de spam
-    for (NSString *key in [self observableKeys]) {
+    for (NSString *key in [self observableKeys]) {// entre las 2 entidades solo cambian los observableKeys
         
         [self removeObserver:self
                   forKeyPath:key];
     }
 }
-
+*/
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change

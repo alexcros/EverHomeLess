@@ -2,6 +2,7 @@
 // Make changes to ACCNote.h instead.
 
 @import CoreData;
+#import "ACCEverHomeLessBaseClass.h"
 
 extern const struct ACCNoteAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -21,11 +22,10 @@ extern const struct ACCNoteRelationships {
 @interface ACCNoteID : NSManagedObjectID {}
 @end
 
-@interface _ACCNote : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_; //manda entity description etc
-+ (NSString*)entityName; // nombre de la entidad
+@interface _ACCNote : ACCEverHomeLessBaseClass {}
++ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
++ (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-
 @property (nonatomic, readonly, strong) ACCNoteID* objectID;
 
 @property (nonatomic, strong) NSDate* creationDate;

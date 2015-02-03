@@ -1,32 +1,16 @@
-#import "ACCNote.h"
-#import "ACCPhotoContainer.h"
-#import "ACCNotebook.h"
+//
+//  ACCEverHomeLessBaseClass.m
+//  EverHomeLess
+//
+//  Created by Alexandre Cros on 03/02/15.
+//  Copyright (c) 2015 Alex Cros. All rights reserved.
+//
 
-@interface ACCNote ()
+#import "ACCEverHomeLessBaseClass.h"
 
-// Private interface goes here.
+@implementation ACCEverHomeLessBaseClass
 
-@end
-
-@implementation ACCNote
-
-+(instancetype) noteWithName:(NSString*) name
-                    notebook:(ACCNotebook*) notebook
-                     context:(NSManagedObjectContext*) context{
-    
-    ACCNote *note = [self insertInManagedObjectContext:context];
-    
-    note.name = name;
-    note.notebook = notebook;
-    note.creationDate = [NSDate date];
-    note.photo = [ACCPhotoContainer insertInManagedObjectContext:context];
-    note.modificationDate = [NSDate date];
-    
-    return note;
-    
-    
-}
-/* obsolete
+// copy paste del notebook, modificado
 #pragma mark - Lifecycle
 
 -(void) awakeFromInsert{
@@ -49,14 +33,10 @@
     [self tearDownKVO];
     
 }
- */
 #pragma mark - Utils
 // implementacion del for
 -(NSArray*)observableKeys{
-    return @[ACCNoteAttributes.name,
-             ACCNoteAttributes.text,
-             ACCNoteRelationships.notebook,
-             ACCNoteRelationships.photo,@"photo.photodata"];
+    return nil;
 }
 
 #pragma mark - KVO
@@ -67,7 +47,7 @@
     // por cada clave que me devuelve un metoodo que se va a llamar observableKeys
     // necesitamos una implementacion
     
-    for (NSString* key in [self observableKeys]) {
+    for (id key in [self observableKeys]) {
         
         [self addObserver:self
                forKeyPath:key // or method
@@ -77,7 +57,6 @@
     }
     
 }
-/* obsolete: new class 
 -(void) tearDownKVO{
     // Baja en todas las listas de spam
     for (NSString *key in [self observableKeys]) {// entre las 2 entidades solo cambian los observableKeys
@@ -86,7 +65,7 @@
                   forKeyPath:key];
     }
 }
-
+/* obsolete
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change
@@ -95,5 +74,5 @@
     self.modificationDate = [NSDate date];
     
 }
- */
+*/
 @end

@@ -2,6 +2,7 @@
 // Make changes to ACCPhotoContainer.h instead.
 
 @import CoreData;
+#import "ACCEverHomeLessBaseClass.h"
 
 extern const struct ACCPhotoContainerAttributes {
 	__unsafe_unretained NSString *photoData;
@@ -16,7 +17,7 @@ extern const struct ACCPhotoContainerRelationships {
 @interface ACCPhotoContainerID : NSManagedObjectID {}
 @end
 
-@interface _ACCPhotoContainer : NSManagedObject {}
+@interface _ACCPhotoContainer : ACCEverHomeLessBaseClass {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

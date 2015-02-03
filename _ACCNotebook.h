@@ -2,6 +2,7 @@
 // Make changes to ACCNotebook.h instead.
 
 @import CoreData;
+#import "ACCEverHomeLessBaseClass.h"
 
 extern const struct ACCNotebookAttributes {
 	__unsafe_unretained NSString *creationDate;
@@ -18,7 +19,7 @@ extern const struct ACCNotebookRelationships {
 @interface ACCNotebookID : NSManagedObjectID {}
 @end
 
-@interface _ACCNotebook : NSManagedObject {}
+@interface _ACCNotebook : ACCEverHomeLessBaseClass {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;

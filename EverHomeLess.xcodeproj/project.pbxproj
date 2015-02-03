@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2418A41A80D0B2005C855C /* ACCEverHomeLessBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2418A31A80D0B2005C855C /* ACCEverHomeLessBaseClass.m */; };
 		8E408F8B1A7F918200E7842F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E408F8A1A7F918200E7842F /* main.m */; };
 		8E408F8E1A7F918200E7842F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E408F8D1A7F918200E7842F /* AppDelegate.m */; };
 		8E408F901A7F918200E7842F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E408F8F1A7F918200E7842F /* Images.xcassets */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E2418A21A80D0B2005C855C /* ACCEverHomeLessBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCEverHomeLessBaseClass.h; sourceTree = SOURCE_ROOT; };
+		8E2418A31A80D0B2005C855C /* ACCEverHomeLessBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCEverHomeLessBaseClass.m; sourceTree = SOURCE_ROOT; };
 		8E408F851A7F918200E7842F /* EverHomeLess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverHomeLess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E408F891A7F918200E7842F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E408F8A1A7F918200E7842F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 		8E408FC71A7FABEF00E7842F /* Machine */ = {
 			isa = PBXGroup;
 			children = (
+				8E2418A21A80D0B2005C855C /* ACCEverHomeLessBaseClass.h */,
+				8E2418A31A80D0B2005C855C /* ACCEverHomeLessBaseClass.m */,
 				8E408FB51A7FAB3400E7842F /* _ACCNote.h */,
 				8E408FB61A7FAB3400E7842F /* _ACCNote.m */,
 				8E408FB71A7FAB3400E7842F /* _ACCNotebook.h */,
@@ -262,6 +267,7 @@
 				8E408FC51A7FAB3400E7842F /* ACCNotebook.m in Sources */,
 				8E408F8E1A7F918200E7842F /* AppDelegate.m in Sources */,
 				8E408FC61A7FAB3400E7842F /* ACCPhotoContainer.m in Sources */,
+				8E2418A41A80D0B2005C855C /* ACCEverHomeLessBaseClass.m in Sources */,
 				8E408FC11A7FAB3400E7842F /* _ACCNote.m in Sources */,
 				8E408F8B1A7F918200E7842F /* main.m in Sources */,
 				8E408FC21A7FAB3400E7842F /* _ACCNotebook.m in Sources */,
@@ -450,6 +456,7 @@
 				8E408FA41A7F918200E7842F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E408FA51A7F918200E7842F /* Build configuration list for PBXNativeTarget "EverHomeLessTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +465,7 @@
 				8E408FA71A7F918200E7842F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
