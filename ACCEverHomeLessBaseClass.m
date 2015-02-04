@@ -46,12 +46,12 @@
     
     // por cada clave que me devuelve un metoodo que se va a llamar observableKeys
     // necesitamos una implementacion
-    //opciones para que te pase valor antiguo y nuevo (no no hace falta: )
+    //opciones para que te pase valor antiguo y nuevo (no no hace falta: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld )
     for (id key in [self observableKeys]) {
         
         [self addObserver:self
                forKeyPath:key // or method
-                  options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                  options: 0
                   context:NULL];
         
     }
