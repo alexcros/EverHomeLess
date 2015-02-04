@@ -55,12 +55,13 @@
 -(NSArray*)observableKeys{
     return @[ACCNoteAttributes.name,
              ACCNoteAttributes.text,
+             ACCNoteRelationships.photo,
              ACCNoteRelationships.notebook,
-             ACCNoteRelationships.photo,@"photo.photodata"];
+             @"photo.photoData"];
 }
 
 #pragma mark - KVO
-
+/*
 -(void)setupKVO{
     // Alta en notificaciones para las propiedades que quiero observar
     
@@ -77,7 +78,7 @@
     }
     
 }
-/* obsolete: new class 
+ obsolete: new class
 -(void) tearDownKVO{
     // Baja en todas las listas de spam
     for (NSString *key in [self observableKeys]) {// entre las 2 entidades solo cambian los observableKeys
@@ -86,7 +87,7 @@
                   forKeyPath:key];
     }
 }
-
+*/
 -(void)observeValueForKeyPath:(NSString *)keyPath
                      ofObject:(id)object
                        change:(NSDictionary *)change
@@ -95,5 +96,5 @@
     self.modificationDate = [NSDate date];
     
 }
- */
+ 
 @end

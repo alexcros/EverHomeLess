@@ -1,4 +1,5 @@
 #import "_ACCNotebook.h"
+@import Foundation;
 
 @interface ACCNotebook : _ACCNotebook {}
 // C+(instancetype) noteWithName:(NSString*) name

@@ -9,7 +9,11 @@
 #import "AppDelegate.h"
 #import "AGTCoreDataStack.h"
 #import "ACCNotebook.h"
+#import "ACCNotebooksViewController.h"
 #import "ACCNote.h"
+#import "ACCPhotoContainer.h"
+#import "UIViewController+Navigation.h"
+
 
 @interface AppDelegate ()
 @property (nonatomic, strong) AGTCoreDataStack *stack; // var de coreDataStack
@@ -20,15 +24,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // creamos el stack
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
     self.stack = [AGTCoreDataStack coreDataStackWithModelName:@"Model"];
     
     //creamos datos chorras
     [self createDummyData];
     //trastear
-    [self trastearConDatos];
+    //[self trastearConDatos];
+    
+    // creamos el conjunto de datos
+    NSFetchRequest *r =[NSFetchRequest fetchRequestWithEntityName:[ACCNotebook entityName]];
+    r.fetchBatchSize = 30;
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:ACCNoteAttributes.name
+                                                        ascending:YES
+                                                         selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:ACCNoteAttributes.modificationDate
+                                                        ascending:NO]];
+    
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]initWithFetchRequest:r managedObjectContext:self.stack.context sectionNameKeyPath:nil cacheName:nil];
     
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // creamos el controlador
+    ACCNotebooksViewController *nbVC = [[ACCNotebooksViewController alloc] initWithFetchedResultsController:fc style:UITableViewStylePlain];
+    
+    
+    // lo metemos en un Navigation Controller
+    //UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:nbVC];
+    
+    
+    
+    // lo mostramos
+   // self.window.rootViewController = nav;
+    self.window.rootViewController = [nbVC accWrappedInNavigation];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -85,10 +115,10 @@
     ACCNote *iCachete = [ACCNote noteWithName:@"iCachete" notebook:apps
                                       context:self.stack.context];
     
-    // comprobar que modificationDate se actualiza
-    iCachete.text = @"APP educativa para reforzar la coordinacion motora fina y los reglejos";
-    
-    NSLog(@"Despues: %@", iCachete.modificationDate);
+    // Comprobar que modificationDate se actualiza
+    NSLog(@"Antes: %@", iCachete.modificationDate);
+    iCachete.text = @"App educativa para reforzar la coordinación motora fina y los reflejos";
+    NSLog(@"Después: %@", iCachete.modificationDate);
     
     // Busqueda
     NSFetchRequest *r = [NSFetchRequest fetchRequestWithEntityName:[ACCNote entityName]];
@@ -110,18 +140,18 @@ NSError *err = nil;
 NSArray *res = [self.stack.context executeFetchRequest:r
                                                  error:&err];
 
-if (res == nil) {
- 
-    NSLog(@"Error al buscar: %@",err);
-}
-
-    // la cagamos
-    NSLog(@"Numero de libretas: %lu", (unsigned long)[res count]);
+    if (res == nil) {
+        // Error
+        NSLog(@"Error al buscar: %@", err);
+    } else {
+        NSLog(@"Número de notas: %lu", (unsigned long)[res count]);
+        NSLog(@" las notas: %@", res);
+        
+        // De verdad es un array?
+        // No se debe obligar a cargar todo en memoria (res class). Sólo para ejemplo
+        NSLog(@"Clase: %@", [res class]);
+    }
     
-    NSLog(@"las libretas: %@", res);
-    
-    // es un array?
-    NSLog(@"Clase: %@", [res class]);
     
     //borrar
     [self.stack.context deleteObject:apps]; //borro libreta

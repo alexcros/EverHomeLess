@@ -21,6 +21,9 @@
 		8E408FC41A7FAB3400E7842F /* ACCNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E408FBC1A7FAB3400E7842F /* ACCNote.m */; };
 		8E408FC51A7FAB3400E7842F /* ACCNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E408FBE1A7FAB3400E7842F /* ACCNotebook.m */; };
 		8E408FC61A7FAB3400E7842F /* ACCPhotoContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E408FC01A7FAB3400E7842F /* ACCPhotoContainer.m */; };
+		8E4330BD1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */; };
+		8E4330C11A82208800C72EC9 /* ACCNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */; };
+		8E4330C91A823E2F00C72EC9 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330C81A823E2F00C72EC9 /* UIViewController+Navigation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		8E408FBE1A7FAB3400E7842F /* ACCNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNotebook.m; sourceTree = SOURCE_ROOT; };
 		8E408FBF1A7FAB3400E7842F /* ACCPhotoContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCPhotoContainer.h; sourceTree = SOURCE_ROOT; };
 		8E408FC01A7FAB3400E7842F /* ACCPhotoContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCPhotoContainer.m; sourceTree = SOURCE_ROOT; };
+		8E4330BB1A821FAC00C72EC9 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		8E4330BE1A82208800C72EC9 /* ACCNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCNotebooksViewController.h; sourceTree = "<group>"; };
+		8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNotebooksViewController.m; sourceTree = "<group>"; };
+		8E4330C71A823E2F00C72EC9 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Navigation.h"; path = "../UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		8E4330C81A823E2F00C72EC9 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Navigation.m"; path = "../UIViewController+Navigation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +111,8 @@
 		8E408F871A7F918200E7842F /* EverHomeLess */ = {
 			isa = PBXGroup;
 			children = (
+				8E4330C31A823DC100C72EC9 /* Categories */,
+				8E4330BA1A821FA000C72EC9 /* Controllers */,
 				8E408FA81A7F950B00E7842F /* Models */,
 				8E408F8C1A7F918200E7842F /* AppDelegate.h */,
 				8E408F8D1A7F918200E7842F /* AppDelegate.m */,
@@ -168,6 +179,26 @@
 				8E408FBA1A7FAB3400E7842F /* _ACCPhotoContainer.m */,
 			);
 			name = Machine;
+			sourceTree = "<group>";
+		};
+		8E4330BA1A821FA000C72EC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E4330BE1A82208800C72EC9 /* ACCNotebooksViewController.h */,
+				8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */,
+				8E4330BB1A821FAC00C72EC9 /* AGTCoreDataTableViewController.h */,
+				8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8E4330C31A823DC100C72EC9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8E4330C81A823E2F00C72EC9 /* UIViewController+Navigation.m */,
+				8E4330C71A823E2F00C72EC9 /* UIViewController+Navigation.h */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,12 +302,15 @@
 			files = (
 				8E2418A71A80D6B1005C855C /* AGTCoreDataStack.m in Sources */,
 				8E408FC51A7FAB3400E7842F /* ACCNotebook.m in Sources */,
+				8E4330BD1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m in Sources */,
 				8E408F8E1A7F918200E7842F /* AppDelegate.m in Sources */,
+				8E4330C91A823E2F00C72EC9 /* UIViewController+Navigation.m in Sources */,
 				8E408FC61A7FAB3400E7842F /* ACCPhotoContainer.m in Sources */,
 				8E2418A41A80D0B2005C855C /* ACCEverHomeLessBaseClass.m in Sources */,
 				8E408FC11A7FAB3400E7842F /* _ACCNote.m in Sources */,
 				8E408F8B1A7F918200E7842F /* main.m in Sources */,
 				8E408FC21A7FAB3400E7842F /* _ACCNotebook.m in Sources */,
+				8E4330C11A82208800C72EC9 /* ACCNotebooksViewController.m in Sources */,
 				8E408FC31A7FAB3400E7842F /* _ACCPhotoContainer.m in Sources */,
 				8E408FC41A7FAB3400E7842F /* ACCNote.m in Sources */,
 				8E408FAB1A7F957C00E7842F /* Model.xcdatamodeld in Sources */,

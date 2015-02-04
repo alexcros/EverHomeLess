@@ -50,9 +50,9 @@
     return @[ACCNotebookAttributes.name,// created with mogenerator :)
              ACCNotebookRelationships.notes];//created with mogenerator :)
 }
-/* obsolete by new super class
-#pragma mark - KVO
 
+#pragma mark - KVO
+/*
 -(void)setupKVO{
     // Alta en notificaciones para las propiedades que quiero observar
     

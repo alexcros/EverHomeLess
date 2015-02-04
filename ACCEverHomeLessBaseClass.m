@@ -28,7 +28,7 @@
 }
 
 -(void) willTurnIntoFault{
-    [self willTurnIntoFault];
+    [super willTurnIntoFault];
     
     [self tearDownKVO];
     
@@ -47,13 +47,11 @@
     // por cada clave que me devuelve un metoodo que se va a llamar observableKeys
     // necesitamos una implementacion
     //opciones para que te pase valor antiguo y nuevo (no no hace falta: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld )
-    for (id key in [self observableKeys]) {
-        
+    for (NSString * key in [self observableKeys]) {
         [self addObserver:self
-               forKeyPath:key // or method
-                  options: 0
+               forKeyPath:key
+                  options:0
                   context:NULL];
-        
     }
     
 }

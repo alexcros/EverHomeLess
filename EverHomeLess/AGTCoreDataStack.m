@@ -44,7 +44,7 @@
         _storeCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.model];
         
         // Automagically do light migrations
-        NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @YES,                                         NSInferMappingModelAutomaticallyOption : @YES} ;
+        //NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @YES,                                         NSInferMappingModelAutomaticallyOption : @YES} ;
         
         NSError *err = nil;
         if (![_storeCoordinator addPersistentStoreWithType:NSSQLiteStoreType
@@ -201,7 +201,7 @@
 }
 
 
-
+/*
 
 -(void) laPolla{
     
@@ -217,7 +217,7 @@
 
 }
 
-
+*/
 
 
 
