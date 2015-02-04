@@ -9,6 +9,9 @@
 #import "ACCNotebooksViewController.h"
 #import "ACCNotebook.h"
 #import "ACCNote.h"
+#import "ACCNotesViewController.h"
+
+
 //#import "AGTCoreDataTableViewController.h"
 
 @interface ACCNotebooksViewController ()
@@ -84,11 +87,42 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"Remove";
 }
 
+#pragma mark - Delegate
+
+-(void)tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // averiguar libreta
+    ACCNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    // creo instancia
+    NSFetchRequest *r =[NSFetchRequest fetchRequestWithEntityName:[ACCNote entityName]];
+    r.fetchBatchSize = 30;
+   // r = [NSFetchRequest fetchRequestWithEntityName:[ACCNote entityName]];
+    
+    r.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:ACCNoteAttributes.name
+                                                        ascending:YES
+                                                         selector:@selector(caseInsensitiveCompare:)],
+                          [NSSortDescriptor sortDescriptorWithKey:ACCNoteAttributes.modificationDate
+                                                        ascending:NO]];
+    // predicado
+    r.predicate = [NSPredicate predicateWithFormat:@"notebook == %@",nb];
+    
+    NSFetchedResultsController *fc = [[NSFetchedResultsController alloc]initWithFetchRequest:r managedObjectContext:self.fetchedResultsController.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+  
+    // creo una instanca de contr de notas
+    ACCNotesViewController *nVC = [[ACCNotesViewController alloc]initWithFetchedResultsController:fc style:UITableViewStylePlain];
+    
+    // lo pusheo
+    [self.navigationController pushViewController:nVC
+                                         animated:YES];
+    
+}
+
 #pragma mark - Actions
 
 -(void)addNotebook:(id)sender{
                                    
-[ACCNotebook notebookWithName:@"Nueva Libreta" context:self.fetchedResultsController.managedObjectContext];
+[ACCNotebook notebookWithName:@"Nueva Libreta"
+                      context:self.fetchedResultsController.managedObjectContext];
 }
 
 

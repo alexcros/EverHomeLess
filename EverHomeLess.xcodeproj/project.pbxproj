@@ -24,6 +24,7 @@
 		8E4330BD1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */; };
 		8E4330C11A82208800C72EC9 /* ACCNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */; };
 		8E4330C91A823E2F00C72EC9 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330C81A823E2F00C72EC9 /* UIViewController+Navigation.m */; };
+		8E4330CC1A82435300C72EC9 /* ACCNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330CB1A82435300C72EC9 /* ACCNotesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNotebooksViewController.m; sourceTree = "<group>"; };
 		8E4330C71A823E2F00C72EC9 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Navigation.h"; path = "../UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		8E4330C81A823E2F00C72EC9 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Navigation.m"; path = "../UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		8E4330CA1A82435300C72EC9 /* ACCNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCNotesViewController.h; sourceTree = "<group>"; };
+		8E4330CB1A82435300C72EC9 /* ACCNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNotesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */,
 				8E4330BB1A821FAC00C72EC9 /* AGTCoreDataTableViewController.h */,
 				8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */,
+				8E4330CA1A82435300C72EC9 /* ACCNotesViewController.h */,
+				8E4330CB1A82435300C72EC9 /* ACCNotesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				8E4330BD1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m in Sources */,
 				8E408F8E1A7F918200E7842F /* AppDelegate.m in Sources */,
 				8E4330C91A823E2F00C72EC9 /* UIViewController+Navigation.m in Sources */,
+				8E4330CC1A82435300C72EC9 /* ACCNotesViewController.m in Sources */,
 				8E408FC61A7FAB3400E7842F /* ACCPhotoContainer.m in Sources */,
 				8E2418A41A80D0B2005C855C /* ACCEverHomeLessBaseClass.m in Sources */,
 				8E408FC11A7FAB3400E7842F /* _ACCNote.m in Sources */,
