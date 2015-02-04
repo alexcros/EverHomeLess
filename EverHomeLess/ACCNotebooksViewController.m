@@ -66,7 +66,7 @@
     // la devuelvo
     return cell;
 }
-
+// borrar
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *) indexPath{
     
     // averiguar si el pollo quiere eliminar
@@ -110,6 +110,8 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
   
     // creo una instanca de contr de notas
     ACCNotesViewController *nVC = [[ACCNotesViewController alloc]initWithFetchedResultsController:fc style:UITableViewStylePlain];
+    
+    nVC.notebook = nb;
     
     // lo pusheo
     [self.navigationController pushViewController:nVC

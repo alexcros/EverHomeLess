@@ -7,9 +7,10 @@
 //
 
 #import "AGTCoreDataTableViewController.h"
+#import "ACCNotebook.h"
 
 @interface ACCNotesViewController : AGTCoreDataTableViewController
 
-
+@property (strong, nonatomic) ACCNotebook *notebook;
 
 @end

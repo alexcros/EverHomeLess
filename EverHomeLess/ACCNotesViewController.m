@@ -8,6 +8,7 @@
 
 #import "ACCNotesViewController.h"
 #import "ACCNote.h"
+
 #import "ACCPhotoContainer.h"
 
 @interface ACCNotesViewController ()
@@ -16,16 +17,51 @@
 
 @implementation ACCNotesViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:NO];
     // Do any additional setup after loading the view.
+    self.title = self.notebook.name;
+    
 }
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UIBarButtonItem *addBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNote:)];
+    
+    self.navigationItem.rightBarButtonItem = addBtn;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+
+// borrar notas
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *) indexPath{
+    
+    // averiguar si el pollo quiere eliminar
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //Borramos la nota/ cuala es?
+        NSManagedObjectContext *ctx = self.fetchedResultsController.managedObjectContext;
+        
+        ACCNote *difunto = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        [ctx deleteObject:difunto];
+    }
+}
+
+-(NSString*)tableView:(UITableView *)tableView
+titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return @"Remove";
+}
+
+// crea nota
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     // averiguar la nota
     ACCNote *n = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -46,9 +82,25 @@
 
     return cell;
 
-
-
-
 }
+#pragma mark - Actions
+
+-(void)addNote:(id) sender{
+    
+    [ACCNote noteWithName:@"Nueva nota"
+                 notebook:self.notebook
+                  context:self.notebook.managedObjectContext];
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @end
