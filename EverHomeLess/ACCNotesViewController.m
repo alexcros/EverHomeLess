@@ -8,6 +8,7 @@
 
 #import "ACCNotesViewController.h"
 #import "ACCNote.h"
+#import "ACCNotebookTableViewCell.h"
 
 #import "ACCPhotoContainer.h"
 
@@ -30,6 +31,8 @@
     UIBarButtonItem *addBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNote:)];
     
     self.navigationItem.rightBarButtonItem = addBtn;
+    
+    
 }
 
 

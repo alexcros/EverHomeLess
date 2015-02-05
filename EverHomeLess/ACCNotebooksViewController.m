@@ -10,6 +10,7 @@
 #import "ACCNotebook.h"
 #import "ACCNote.h"
 #import "ACCNotesViewController.h"
+#import "ACCNotebookTableViewCell.h"
 
 
 //#import "AGTCoreDataTableViewController.h"
@@ -28,6 +29,14 @@
     UIBarButtonItem *addBtn = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNotebook:)];
     
     self.navigationItem.rightBarButtonItem = addBtn;
+    
+    //registramos el nib de la celda
+    // registramos el nib de la celda
+    UINib *nib = [UINib nibWithNibName:@"ACCNotebookTableViewCell"
+                                bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:[ACCNotebookTableViewCell cellId]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,29 +51,36 @@
     ACCNotebook *nb = [self.fetchedResultsController
                        objectAtIndexPath:indexPath];
     // creo una celda
-    static NSString *CellId = @"NoteBookId";
+     //static NSString *CellId = @"NoteBookId";
     //UITableViewCell *cell = [tableView dequeueRe
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
     
-    if(cell == nil){
+    ACCNotebookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[ACCNotebookTableViewCell cellId]forIndexPath:indexPath];
+    
+    //if(cell == nil){
         
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellId];
-    }
+        //cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellId];
+    //}
     
     
     
     // la configuro (syncro model > view)
-    cell.textLabel.text = nb.name;
+   //1.  cell.textLabel.text = nb.name;
+    cell.nameView.text = nb.name;
+    cell.notesView.text= [NSString stringWithFormat:@"%lu",nb.notes.count];
+   // 1. NSDateFormatter *fmt = [NSDateFormatter new];
+    //1. fmt.dateStyle = NSDateFormatterShortStyle;
     
-    NSDateFormatter *fmt = [NSDateFormatter new];
-    fmt.dateStyle = NSDateFormatterShortStyle;
-    
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%lu notes)",
-                                 [fmt stringFromDate:nb.modificationDate],(unsigned long)nb.notes.count];
+    //1. cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%lu notes)",
+      //                           [fmt stringFromDate:nb.modificationDate],(unsigned long)nb.notes.count];
     
     // la devuelvo
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [ACCNotebookTableViewCell height];
+    
 }
 // borrar
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *) indexPath{
