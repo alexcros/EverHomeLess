@@ -27,6 +27,18 @@
 		8E4330CC1A82435300C72EC9 /* ACCNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330CB1A82435300C72EC9 /* ACCNotesViewController.m */; };
 		8E4330D11A836E5600C72EC9 /* ACCNotebookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4330CF1A836E5600C72EC9 /* ACCNotebookTableViewCell.m */; };
 		8E4330D21A836E5600C72EC9 /* ACCNotebookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4330D01A836E5600C72EC9 /* ACCNotebookTableViewCell.xib */; };
+		8E70E1D81A89736D00B3E7EE /* ACCDatesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1D61A89736D00B3E7EE /* ACCDatesTableViewCell.m */; };
+		8E70E1D91A89736D00B3E7EE /* ACCDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1D71A89736D00B3E7EE /* ACCDatesTableViewCell.xib */; };
+		8E70E1DB1A8973B200B3E7EE /* NoImageAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1DA1A8973B200B3E7EE /* NoImageAvailable.jpg */; };
+		8E70E1DF1A89764E00B3E7EE /* ACCNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1DE1A89764E00B3E7EE /* ACCNoteViewController.m */; };
+		8E70E1E31A89775800B3E7EE /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1E11A89775800B3E7EE /* PhotoViewController.m */; };
+		8E70E1E41A89775800B3E7EE /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1E21A89775800B3E7EE /* PhotoViewController.xib */; };
+		8E70E1E81A89789800B3E7EE /* ACCPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1E61A89789800B3E7EE /* ACCPhotoTableViewCell.m */; };
+		8E70E1E91A89789800B3E7EE /* ACCPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1E71A89789800B3E7EE /* ACCPhotoTableViewCell.xib */; };
+		8E70E1ED1A897B4F00B3E7EE /* ACCTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1EB1A897B4F00B3E7EE /* ACCTextTableViewCell.m */; };
+		8E70E1EE1A897B4F00B3E7EE /* ACCTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1EC1A897B4F00B3E7EE /* ACCTextTableViewCell.xib */; };
+		8E70E1F21A897B7700B3E7EE /* ACCNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E70E1F01A897B7700B3E7EE /* ACCNameTableViewCell.m */; };
+		8E70E1F31A897B7700B3E7EE /* ACCNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E70E1F11A897B7700B3E7EE /* ACCNameTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +90,24 @@
 		8E4330CE1A836E5600C72EC9 /* ACCNotebookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCNotebookTableViewCell.h; sourceTree = "<group>"; };
 		8E4330CF1A836E5600C72EC9 /* ACCNotebookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNotebookTableViewCell.m; sourceTree = "<group>"; };
 		8E4330D01A836E5600C72EC9 /* ACCNotebookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACCNotebookTableViewCell.xib; sourceTree = "<group>"; };
+		8E70E1D51A89736D00B3E7EE /* ACCDatesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCDatesTableViewCell.h; sourceTree = "<group>"; };
+		8E70E1D61A89736D00B3E7EE /* ACCDatesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCDatesTableViewCell.m; sourceTree = "<group>"; };
+		8E70E1D71A89736D00B3E7EE /* ACCDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACCDatesTableViewCell.xib; sourceTree = "<group>"; };
+		8E70E1DA1A8973B200B3E7EE /* NoImageAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NoImageAvailable.jpg; sourceTree = "<group>"; };
+		8E70E1DD1A89764E00B3E7EE /* ACCNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCNoteViewController.h; sourceTree = "<group>"; };
+		8E70E1DE1A89764E00B3E7EE /* ACCNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNoteViewController.m; sourceTree = "<group>"; };
+		8E70E1E01A89775800B3E7EE /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		8E70E1E11A89775800B3E7EE /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		8E70E1E21A89775800B3E7EE /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		8E70E1E51A89789800B3E7EE /* ACCPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCPhotoTableViewCell.h; sourceTree = "<group>"; };
+		8E70E1E61A89789800B3E7EE /* ACCPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCPhotoTableViewCell.m; sourceTree = "<group>"; };
+		8E70E1E71A89789800B3E7EE /* ACCPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACCPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		8E70E1EA1A897B4F00B3E7EE /* ACCTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCTextTableViewCell.h; sourceTree = "<group>"; };
+		8E70E1EB1A897B4F00B3E7EE /* ACCTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCTextTableViewCell.m; sourceTree = "<group>"; };
+		8E70E1EC1A897B4F00B3E7EE /* ACCTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACCTextTableViewCell.xib; sourceTree = "<group>"; };
+		8E70E1EF1A897B7700B3E7EE /* ACCNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCNameTableViewCell.h; sourceTree = "<group>"; };
+		8E70E1F01A897B7700B3E7EE /* ACCNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCNameTableViewCell.m; sourceTree = "<group>"; };
+		8E70E1F11A897B7700B3E7EE /* ACCNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ACCNameTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +149,7 @@
 		8E408F871A7F918200E7842F /* EverHomeLess */ = {
 			isa = PBXGroup;
 			children = (
+				8E70E1DC1A8973C400B3E7EE /* Resources */,
 				8E4330CD1A836E2000C72EC9 /* Views */,
 				8E4330C31A823DC100C72EC9 /* Categories */,
 				8E4330BA1A821FA000C72EC9 /* Controllers */,
@@ -193,12 +224,17 @@
 		8E4330BA1A821FA000C72EC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E4330BE1A82208800C72EC9 /* ACCNotebooksViewController.h */,
-				8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */,
 				8E4330BB1A821FAC00C72EC9 /* AGTCoreDataTableViewController.h */,
 				8E4330BC1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m */,
+				8E4330BE1A82208800C72EC9 /* ACCNotebooksViewController.h */,
+				8E4330BF1A82208800C72EC9 /* ACCNotebooksViewController.m */,
 				8E4330CA1A82435300C72EC9 /* ACCNotesViewController.h */,
 				8E4330CB1A82435300C72EC9 /* ACCNotesViewController.m */,
+				8E70E1DD1A89764E00B3E7EE /* ACCNoteViewController.h */,
+				8E70E1DE1A89764E00B3E7EE /* ACCNoteViewController.m */,
+				8E70E1E01A89775800B3E7EE /* PhotoViewController.h */,
+				8E70E1E11A89775800B3E7EE /* PhotoViewController.m */,
+				8E70E1E21A89775800B3E7EE /* PhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -218,8 +254,28 @@
 				8E4330CE1A836E5600C72EC9 /* ACCNotebookTableViewCell.h */,
 				8E4330CF1A836E5600C72EC9 /* ACCNotebookTableViewCell.m */,
 				8E4330D01A836E5600C72EC9 /* ACCNotebookTableViewCell.xib */,
+				8E70E1E51A89789800B3E7EE /* ACCPhotoTableViewCell.h */,
+				8E70E1E61A89789800B3E7EE /* ACCPhotoTableViewCell.m */,
+				8E70E1E71A89789800B3E7EE /* ACCPhotoTableViewCell.xib */,
+				8E70E1EA1A897B4F00B3E7EE /* ACCTextTableViewCell.h */,
+				8E70E1EB1A897B4F00B3E7EE /* ACCTextTableViewCell.m */,
+				8E70E1EC1A897B4F00B3E7EE /* ACCTextTableViewCell.xib */,
+				8E70E1D51A89736D00B3E7EE /* ACCDatesTableViewCell.h */,
+				8E70E1D61A89736D00B3E7EE /* ACCDatesTableViewCell.m */,
+				8E70E1D71A89736D00B3E7EE /* ACCDatesTableViewCell.xib */,
+				8E70E1EF1A897B7700B3E7EE /* ACCNameTableViewCell.h */,
+				8E70E1F01A897B7700B3E7EE /* ACCNameTableViewCell.m */,
+				8E70E1F11A897B7700B3E7EE /* ACCNameTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8E70E1DC1A8973C400B3E7EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E70E1DA1A8973B200B3E7EE /* NoImageAvailable.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,7 +358,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E70E1EE1A897B4F00B3E7EE /* ACCTextTableViewCell.xib in Resources */,
 				8E408F931A7F918200E7842F /* LaunchScreen.xib in Resources */,
+				8E70E1D91A89736D00B3E7EE /* ACCDatesTableViewCell.xib in Resources */,
+				8E70E1F31A897B7700B3E7EE /* ACCNameTableViewCell.xib in Resources */,
+				8E70E1DB1A8973B200B3E7EE /* NoImageAvailable.jpg in Resources */,
+				8E70E1E91A89789800B3E7EE /* ACCPhotoTableViewCell.xib in Resources */,
+				8E70E1E41A89775800B3E7EE /* PhotoViewController.xib in Resources */,
 				8E4330D21A836E5600C72EC9 /* ACCNotebookTableViewCell.xib in Resources */,
 				8E408F901A7F918200E7842F /* Images.xcassets in Resources */,
 			);
@@ -323,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4330D11A836E5600C72EC9 /* ACCNotebookTableViewCell.m in Sources */,
+				8E70E1E31A89775800B3E7EE /* PhotoViewController.m in Sources */,
 				8E2418A71A80D6B1005C855C /* AGTCoreDataStack.m in Sources */,
 				8E408FC51A7FAB3400E7842F /* ACCNotebook.m in Sources */,
 				8E4330BD1A821FAC00C72EC9 /* AGTCoreDataTableViewController.m in Sources */,
@@ -330,13 +393,18 @@
 				8E4330C91A823E2F00C72EC9 /* UIViewController+Navigation.m in Sources */,
 				8E4330CC1A82435300C72EC9 /* ACCNotesViewController.m in Sources */,
 				8E408FC61A7FAB3400E7842F /* ACCPhotoContainer.m in Sources */,
+				8E70E1D81A89736D00B3E7EE /* ACCDatesTableViewCell.m in Sources */,
 				8E2418A41A80D0B2005C855C /* ACCEverHomeLessBaseClass.m in Sources */,
+				8E70E1ED1A897B4F00B3E7EE /* ACCTextTableViewCell.m in Sources */,
 				8E408FC11A7FAB3400E7842F /* _ACCNote.m in Sources */,
 				8E408F8B1A7F918200E7842F /* main.m in Sources */,
+				8E70E1DF1A89764E00B3E7EE /* ACCNoteViewController.m in Sources */,
 				8E408FC21A7FAB3400E7842F /* _ACCNotebook.m in Sources */,
 				8E4330C11A82208800C72EC9 /* ACCNotebooksViewController.m in Sources */,
 				8E408FC31A7FAB3400E7842F /* _ACCPhotoContainer.m in Sources */,
 				8E408FC41A7FAB3400E7842F /* ACCNote.m in Sources */,
+				8E70E1E81A89789800B3E7EE /* ACCPhotoTableViewCell.m in Sources */,
+				8E70E1F21A897B7700B3E7EE /* ACCNameTableViewCell.m in Sources */,
 				8E408FAB1A7F957C00E7842F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

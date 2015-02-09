@@ -1,35 +1,42 @@
 //
-//  ACCNotebookTableViewCell.m
+//  PhotoTableViewCell.m
 //  EverHomeLess
 //
 //  Created by Alexandre Cros on 05/02/15.
 //  Copyright (c) 2015 Alex Cros. All rights reserved.
 //
 
-#import "ACCNotebookTableViewCell.h"
+#import "PhotoTableViewCell.h"
+#import "ACCNote.h"
+#import "ACCPhotoContainer.h"
 
-@implementation ACCNotebookTableViewCell
+@implementation PhotoTableViewCell
 
-
-// mostrar libretas del EverHomeLess
-
-+(CGFloat)height{
+#pragma mark - Properties
+-(void) setNote:(ACCNote*) note{
+    //guardamos la nota
+    _note=note;
+    //sincronizamos los datos de la nota con la vista
+    self.photoView.image = note.photo.image;
     
-    return 60.0f;// float
 }
 
+#pragma mark - Class Methods
+
+
++(CGFloat)height{
+    return 320.0f;
+}
 +(NSString*)cellId{
     return [self description];
 }
 
-#pragma mark - TableViewCell
 
-// arcaidin . serializa
+
 - (void)awakeFromNib {
     // Initialization code
 }
 
-// si quieres cambiar algo en el aspecto
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

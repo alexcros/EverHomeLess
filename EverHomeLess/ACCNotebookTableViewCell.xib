@@ -27,6 +27,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameView" destination="hcJ-YH-W76" id="fAS-at-4b6"/>
+                <outlet property="notesView" destination="NAo-NH-rqE" id="cmT-6f-RP2"/>
+            </connections>
             <point key="canvasLocation" x="257" y="353"/>
         </tableViewCell>
     </objects>
